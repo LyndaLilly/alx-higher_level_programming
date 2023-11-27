@@ -5,9 +5,9 @@
 
 /**
  * struct listint_s - this all type of list
- * @n - this is the list
- * @next - this shows the list to point
- * Description - this shows the example of linked list
+ * @n: this is the list
+ * @next: this shows the list to point
+ * Description: this shows the example of linked list
  */
 typedef struct listint_s
 {
