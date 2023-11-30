@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from sys import argv
-    from calculator_1 import addition, substract, multiply, divide
+    from calculator_1 import add, sub, mul, div
     argc = len(argv)
     if argc != 4:
         print('Usage: {} <a> <operator> <b>'.format(argv[0]))
         exit(1)
     executes = {
-        '+': addition,
-        '-': substract,
-        '*': multiply,
-        '/': divide
+        '+': add,
+        '-': sub,
+        '*': mul,
+        '/': div
     }
     if argv[2] in executes:
         res1 = int(argv[1])
