@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import my_python
+import python_for_me
