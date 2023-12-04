@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     x, y = len(tuple_a), len(tuple_b)
     z = ((tuple_a[0] if x >= 1 else 0) +
