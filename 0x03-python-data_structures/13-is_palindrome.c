@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
-*add_nodeint - adds a new node
-*@head: points to head
-*@n: no of int
-*Return: address  or NULL
+*add_nodeint - creates new node
+*@head: points to the head
+*@n: integer
+*Return: address or NULL
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
@@ -21,9 +21,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	return (new);
 }
 /**
-*is_palindrome - checks palindronme
-*@head: points to head
-*Return: 1 or 0
+*is_palindrome - creates a palindronme
+*@head: points t the head
+*Return: 1 or  0
 */
 int is_palindrome(listint_t **head)
 {
