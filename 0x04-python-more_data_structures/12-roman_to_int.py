@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-def ytract(c):
-    y = 0
-    x = max(c)
+def to_subtract(list_num):
+    to_sub = 0
+    max_list = max(list_num)
 
-    for n in c:
-        if x > n:
-            y += n
+    for n in list_num:
+        if max_list > n:
+            to_sub += n
 
-    return (x - y)
+    return (max_list - to_sub)
 
 
 def roman_to_int(roman_string):
@@ -17,23 +17,24 @@ def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
         return 0
 
-    z = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    a = list(z.keys())
+    rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    list_keys = list(rom_n.keys())
 
     num = 0
-    b= 0
-    c = [0]
+    last_rom = 0
+    list_num = [0]
 
     for ch in roman_string:
-        for r_num in a:
+        for r_num in list_keys:
             if r_num == ch:
-                if z.get(ch) <= last_rom:
-                    num += ytract(c)
-                    c = [z.get(ch)]
+                if rom_n.get(ch) <= last_rom:
+                    num += to_subtract(list_num)
+                    list_num = [rom_n.get(ch)]
                 else:
-                    c.append(z.get(ch))
+                    list_num.append(rom_n.get(ch))
 
-                b= z.get(ch)
-    num += ytract(c)
+                last_rom = rom_n.get(ch)
+
+    num += to_subtract(list_num)
 
     return (num)
