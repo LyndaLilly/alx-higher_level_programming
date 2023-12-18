@@ -3,7 +3,7 @@
 def safe_print_division(a, b):
     """gives the product of a and b."""
     try:
-        div = a / b
+        x = a / b
     except (TypeError, ZeroDivisionError):
         x = None
     finally:
