@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""provides solution to N-queens puzzle.
+"""gives solution to the N-queens puzzle.
 
-Determines all possible solutions to placing
-non-attacking queens on an NxN chessboard.
+Determines all possible solutions to placing N
+N non-attacking queens on an NxN chessboard.
 
 Example:
     $ ./101-nqueens.py N
@@ -13,7 +13,7 @@ Attributes:
     board (list): A list of lists representing the chessboard.
     solutions (list): A list of lists containing solutions.
 
-the solutions are represented in the format [[s, t], [s, t], [s, t], [s, t]]
+Solutions are represented in the format [[s, t], [s, t], [s, t], [s, t]]
 where `s` and `t` represent the row and column, respectively, where a
 queen must be placed on the chessboard.
 """
