@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 # 4-rectangle.py
-"""defines a rectangle."""
+"""shows meaning of rectangle class."""
 
 
 class Rectangle:
-    """shows rectangle."""
+    """shows a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """sets  a new Rectangle.
+        """sets/gets a new Rectangle.
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
@@ -70,4 +70,3 @@ class Rectangle:
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
-
