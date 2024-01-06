@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""gives solution to the N-queens puzzle.
+"""provides solution to N-queens puzzle.
 
-Determines all possible solutions to placing N
+for possible solutions to placing N
 N non-attacking queens on an NxN chessboard.
 
 Example:
@@ -21,7 +21,7 @@ import sys
 
 
 def init_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """sets an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for y in range(n)]
     [row.append(' ') for y in range(n) for row in board]
@@ -36,7 +36,7 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """gives the list of lists representation of a solved chessboard."""
     solution = []
     for s in range(len(board)):
         for t in range(len(board)):
