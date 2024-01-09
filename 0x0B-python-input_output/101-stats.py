@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """input and computes metrics.
+
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
     - Total file size up to that point.
