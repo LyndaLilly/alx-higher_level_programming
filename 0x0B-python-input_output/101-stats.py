@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""gets std input and computes metrics.
+"""reads stdinput and computes metrics.
 
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
@@ -26,29 +26,29 @@ if __name__ == "__main__":
     size = 0
     status_codes = {}
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
-    count = 0
+    cnt = 0
 
     try:
-        for line in sys.stdin:
-            if count == 10:
+        for ln in sys.stdin:
+            if cnt == 10:
                 print_stats(size, status_codes)
-                count = 1
+                cnt = 1
             else:
-                count += 1
+                cnt += 1
 
-            line = line.split()
+            ln = ln.split()
 
             try:
-                size += int(line[-1])
+                size += int(ln[-1])
             except (IndexError, ValueError):
                 pass
 
             try:
-                if line[-2] in valid_codes:
-                    if status_codes.get(line[-2], -1) == -1:
-                        status_codes[line[-2]] = 1
+                if ln[-2] in valid_codes:
+                    if status_codes.get(ln[-2], -1) == -1:
+                        status_codes[ln[-2]] = 1
                     else:
-                        status_codes[line[-2]] += 1
+                        status_codes[ln[-2]] += 1
             except IndexError:
                 pass
 
