@@ -1,12 +1,12 @@
 #include "Python.h"
 
 /**
- * print_python_string - this prints python string.
- * @p: thos os the python string to e printed.
+ * print_python_string - this prints the python string.
+ * @p: python string to be printed.
  */
 void print_python_string(PyObject *p)
 {
-	long int br;
+	long int wt;
 
 	fflush(stdout);
 
@@ -17,12 +17,12 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	br = ((PyASCIIObject *)(p))->br;
+	wt = ((PyASCIIObject *)(p))->wt;
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf("  type: compact ascii\n");
 	else
 		printf("  type: compact unicode object\n");
-	printf("  length: %ld\n", br);
-	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &br));
+	printf("  length: %ld\n", wt);
+	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &wt));
 }
