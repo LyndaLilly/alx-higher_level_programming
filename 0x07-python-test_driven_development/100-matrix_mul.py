@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-'''this has get_matrix_size and a matrix_mul fun for a TDD proj
+'''this has get_matrix_size and a matrix_mul func for a TDD proj.
 '''
 
 
 def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
-    '''brings the size of a matrix and performs some
-    matrix val.
+    '''brings the size of a matrix 2geda and performs some
+    matrix func.
     Args:
         matrix (list): The matrix.
         name (str): The name of the matrix.
@@ -18,7 +18,7 @@ def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
         lambda txt: '{} must be a list of lists'.format(txt),
         lambda txt: '{} should contain only integers or floats'.format(txt),
         lambda txt: 'each row of {} must be of the same size'.format(txt),
-        lambda l: all(map(lambda n: isinstance(n, (int, float)), l)),
+        lambda j: all(map(lambda n: isinstance(n, (int, float)), j)),
     )
     size0 = [0, 0]
     size1 = [0, 0]
@@ -68,12 +68,12 @@ def matrix_mul(m_a, m_b):
     if a_sz[1] != b_sz[0]:
         raise ValueError('m_a and m_b can\'t be multiplied')
     else:
-        opt = []
+        c = []
         for a in m_a:
-            res = []
-            for y in range(b_sz[1]):
-                cell_args = zip(range(a_sz[1]), a)
-                val = map(lambda x: x[1] * m_b[x[0]][y], cell_args)
-                res.append(sum(list(val)))
-            opt.append(res)
-        return opt
+            b = []
+            for d in range(b_sz[1]):
+                e = zip(range(a_sz[1]), a)
+                val = map(lambda x: x[1] * m_b[x[0]][d], e)
+                b.append(sum(list(val)))
+            c.append(b)
+        return c
