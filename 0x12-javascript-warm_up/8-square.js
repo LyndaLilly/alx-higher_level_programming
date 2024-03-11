@@ -4,7 +4,7 @@ if (process.argv[2] === undefined || isNaN(process.argv[2])) {
 } else {
   const m = Number(process.argv[2]);
   let n = 0;
-  while (m < n) {
+  while (n < m) {
     console.log('X'.repeat(m));
     n++;
   }
