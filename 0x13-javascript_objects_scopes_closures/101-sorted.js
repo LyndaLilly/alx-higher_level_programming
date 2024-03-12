@@ -12,6 +12,6 @@ for (const k in res1) {
       list.unshift(ttd[ank][0]);
     }
   }
-  newDict[res1[k]] = list;
+  pes[res1[k]] = list;
 }
 console.log(pes);
