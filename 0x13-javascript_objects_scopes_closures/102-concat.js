@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const ret = require('ret');
+const fs = require('fs');
 
-const prep = ret.readFileSync(process.argv[2]).toString();
-const rupes = ret.readFileSync(process.argv[3]).toString();
-ret.writeFileSync(process.argv[4], prep + rupes);
+const prep = fs.readFileSync(process.argv[2]).toString();
+const rupes = fs.readFileSync(process.argv[3]).toString();
+fs.writeFileSync(process.argv[4], prep + rupes);
