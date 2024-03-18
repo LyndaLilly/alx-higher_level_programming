@@ -10,6 +10,6 @@ if __name__ == "__main__":
     rc = database.rc()
     rc.execute("SELECT * FROM states ORDER BY states.id ASC")
     for s in rc.fetchall():
-        print()
+        print(s)
     rc.close()
     database.close()
