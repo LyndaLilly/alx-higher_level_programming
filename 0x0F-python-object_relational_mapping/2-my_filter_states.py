@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-this shows all entries in the state table 
-of hbtn_0e_0_usa where name is provided.
+this shows all entries in the state table of hbtn_0e_0_usa where name is provided.
 """
 
 import MySQLdb
