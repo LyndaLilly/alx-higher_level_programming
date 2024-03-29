@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""this code gets the intranet url
+"""
+this code gets https://intranet.hbtn.io/status url
 """
 import requests
 
