@@ -5,8 +5,9 @@ this code gets https://intranet.hbtn.io/status url
 import requests
 
 if __name__ == '__main__':
-    anx = requests.get("https://intranet.hbtn.io/status")
-    inpt = anx.text
+    link = "https://intranet.hbtn.io/status"
+    xy = requests.get(link)
+    text = xy.text
     print("Body response:")
-    print("\t- type: {}".format(type(inpt)))
-    print("\t- content: {}".format(inpt))
+    print("\t- type: {}".format(type(text)))
+    print("\t- content: {}".format(text))
