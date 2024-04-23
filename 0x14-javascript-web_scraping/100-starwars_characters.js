@@ -1,16 +1,16 @@
 #!/usr/bin/node
 
-const req = require('request');
-const id = process.argv[2];
+const r = require('request');
+const infos = process.argv[2];
 const links = 'https://swapi-api.hbtn.io/api/films/';
-req.get(links + id, function (e, result, body) {
+r.get(links + infos, function (e, result, body) {
   if (e) {
     console.log(e);
   }
-  const data = JSON.parse(body);
-  const dd = data.characters;
-  for (const x of dd) {
-    req.get(x, function (e, result, body1) {
+  const forms = JSON.parse(body);
+  const fm = forms.characters;
+  for (const x of fm) {
+    r.get(x, function (e, result, body1) {
       if (e) {
         console.log(e);
       }
