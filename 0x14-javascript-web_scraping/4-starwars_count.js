@@ -1,12 +1,12 @@
 #!/usr/bin/node
 const request = require('request');
-request(process.argv[2], function (er, response, body) {
-  if (!er) {
-    const res = JSON.parse(body).res;
-    console.log(res.reduce((cnt, mx) => {
-      return mx.characters.find((character) => character.endsWith('/18/'))
-        ? cnt + 1
-        : cnt;
+request(process.argv[2], function (e, response, body) {
+  if (!e) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, m) => {
+      return m.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
     }, 0));
   }
 });
